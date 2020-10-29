@@ -21,10 +21,12 @@ func main(){
 		s = append(s,input)
 	}
 
-
+	fmt.Println("Slice desordenado")
+	fmt.Println(s)
 	//Descendente
 	sort.Sort(sort.Reverse(sort.StringSlice(s)))
-
+	fmt.Println("Slice Descendente")
+	fmt.Println(s)
 	file, err := os.Create("descendente.txt")
 		if err != nil {
 			fmt.Println(err)
@@ -40,6 +42,8 @@ func main(){
 
 	//Ascendente
 	sort.Sort(sort.StringSlice(s))
+	fmt.Println("Slice Ascendente")
+	fmt.Println(s)
 	
 	file1, err1 := os.Create("ascendente.txt")
 	if err1 != nil {
